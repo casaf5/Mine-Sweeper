@@ -1,0 +1,247 @@
+body {
+    /* background-image: url("/img/BACKGROUND.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: lightskyblue;
+    font-family: fantasy;
+    margin: 0;
+}
+
+body h1 {
+    font-size: 80px;
+    display: inline;
+    margin: 0 auto;
+    margin-left: 30%;
+}
+
+h2 span {
+    color: red;
+}
+
+.game-field {
+    margin: auto;
+    margin-top: 0;
+    border: 3px solid #333;
+}
+
+.game-field th {
+    height: 1.8em;
+    width: 2em;
+    text-align: center;
+    font-size: 15px;
+    font-family: fantasy;
+    border: 2px solid #333;
+}
+
+.board td {
+    height: 1.65em;
+    width: 1.9em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6em;
+    font-family: Verdana, Geneva, Tahoma, fantasy;
+    transition: 0.5s;
+}
+
+.hidden {
+    background-color: #6bc328;
+    z-index: 1;
+}
+
+.clicked {
+    /* -moz-box-shadow: 10px 10px 5px 0px rgba(184, 182, 182, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(43, 42, 42, 0.75); */
+    background-color: lightgray;
+    z-index: 2;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+.mine {
+    background-color: red;
+}
+
+.clickedmine {
+    animation-name: flashingmine;
+    animation-duration: 0.2s;
+    animation-iteration-count: 4;
+}
+
+@keyframes flashingmine {
+    0% {
+        outline: 6px solid red
+    }
+    ;
+    25% {
+        outline: 4px solid red
+    }
+    ;
+    50% {
+        outline: 3px solid red
+    }
+    ;
+    75% {
+        outline: 2px solid red
+    }
+    ;
+    100% {
+        outline: 0px solid red
+    }
+    ;
+}
+
+.empty {
+    background-color: lightgray;
+}
+
+h2 {
+    height: 35px;
+    width: 420px;
+    font-size: 2em;
+    font-family: fantasy;
+    text-align: center;
+    letter-spacing: 0.2em;
+    border: 3px solid black;
+    margin: -40px auto;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+h2 span {
+    color: red;
+}
+
+.options {
+    width: 350px;
+    height: 595px;
+    border: 3px solid black;
+    position: absolute;
+    left: 35px;
+    top: 16%;
+}
+
+.options h3 {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    font-family: fantasy;
+    letter-spacing: 2px;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.options button {
+    width: 300px;
+    height: 50px;
+    display: block;
+    position: relative;
+    margin: 5px auto;
+    font-size: 25px;
+    font-family: fantasy;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+.safeClick {
+    background-color: yellow;
+    transition: 0.3s;
+}
+
+.hint button {
+    width: 80px;
+    height: 70px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-left: 25px;
+    background-image: url('img/HINT_OFF.jpeg');
+    background-size: cover;
+    transition: 1s;
+}
+
+.hint h4 {
+    width: 200px;
+    height: 70px;
+    position: relative;
+    margin: 0 auto;
+    font-family: fantasy;
+    font-size: 1em;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    left: 20px;
+    display: none;
+    transition: 1s;
+}
+
+.undo {
+    width: 500px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 30px;
+    font-family: fantasy;
+    background-color: orange;
+    border-radius: 10%;
+}
+
+.time, .minesmarked {
+    color: red;
+}
+
+.scoreboard {
+    width: 350px;
+    height: 600px;
+    border: 2px solid black;
+    position: absolute;
+    right: 35px;
+    top: 135px;
+    border: 3px solid black;
+}
+
+.scores th {
+    /* background-image: url('img/best.png'); */
+    background-size: contain;
+}
+
+.scores th, td {
+    width: 345px;
+    height: 65px;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.scoreboard button {
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    margin: 0 auto;
+    top: 540px;
+    right: 45px;
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+.custom button {
+    background-color: orange;
+    width: 300px;
+    height: 150px;
+}
+
+.easy:hover,.normal:hover,.hard:hover {
+    transition: 0.3s;
+    background-color: yellow;
+   
+}
+

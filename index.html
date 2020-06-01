@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper v1.0</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+
+<body onload="initGame()">
+    <h1>|MINE SWEEPER|</h1>
+    <h2>Life Count :<span></span> </h2>
+
+    <div class="options">
+        <h3>Start a New Game: </h3>
+        <hr>
+        <button class="easy" onclick="setGameSettings(4,2)">Easy</button>
+        <button class="normal" onclick="setGameSettings(8,12)">Normal</button>
+        <button class="hard" onclick="setGameSettings(12,30)">Hard</button>
+        <hr>
+        <button onclick="randSafeClick()">Safe Click(<span class="safe-counter">3</span>)</button>
+        <hr>
+        <div class="hint">
+            <button onclick="turnOnHintMode(this)"></button>
+            <button onclick="turnOnHintMode(this)"></button>
+            <button onclick="turnOnHintMode(this)"></button>
+        </div>
+        <div class="custom">
+            <button onclick="createCustomBoard(this)">Create Custom Board</button>
+            
+        </div>
+    </div>
+    <div class="mine-field">
+        <table class="game-field">
+            <thead>
+                <tr>
+
+                </tr>
+            </thead>
+            <tbody class="board"></tbody>
+        </table>
+    </div>
+    <div class="scoreboard">
+        <table class="scores">
+            <thead>
+                <tr>
+                    <th colspan="12">Best Scores: </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button onclick="clearScores()">Clear Score Board </button>
+    </div>
+    <button class="undo" onclick="undoMove()">UNDO</button>
+
+
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
